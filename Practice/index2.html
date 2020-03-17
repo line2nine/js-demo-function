@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Tạo hàm tìm giá trị nhỏ nhất của mảng
+-->
+<script>
+    let array1 = [-5, -10, 25, 48, 52, -8, 3, -20];
+
+    //-----Tìm phần tử có giá trị nhỏ nhất trong mảng-----
+    function findMinArrayValue(arr) {
+        if (arr.length === 0){
+            return -1;
+        }
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (min > arr[i]){
+                min = arr[i]; //-----Thay min = i khi trong mảng có phần tử là -1. Kết quả sẽ trả về vị trí của phần tử đó-----
+            }
+        }
+        return min;
+    }
+
+    function mainVoid() {
+        console.log(findMinArrayValue(array1));
+    }
+
+    mainVoid()
+</script>
+</body>
+</html>
