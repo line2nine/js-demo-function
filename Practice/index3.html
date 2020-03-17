@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Tạo hàm kiểm tra số nguyên tố
+-->
+<script>
+    function checkIfPrimeNumber(n) {
+        if (n < 2)
+            return false;
+        for (let i = 2; i <= Math.sqrt(n); i++)
+            if (n % i === 0)
+                return false;
+        return true;
+    }
+
+    function mainVoid() {
+        let num = +prompt("Nhập số nguyên dương bất kỳ");
+        if (checkIfPrimeNumber(num)){
+            document.write(num + " là số nguyên tố");
+        }
+        else document.write(num + " không phải số nguyên tố");
+    }
+
+    mainVoid()
+</script>
+</body>
+</html>
