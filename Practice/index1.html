@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+Xây dựng hàm để chuyển đổi từ độ F cho trước sang độ C theo công thức sau: C = (F - 32)/1.8
+-->
+<body>
+<div style="text-align: center">
+    <h2>Chuyển đổi nhiệt độ</h2>
+    <p>Ứng dụng chuyển đổi độ F sang độ C</p>
+    <input type="number" id="inputValue" onkeyup="mainVoid(this.value)" onchange="mainVoid(this.value)">
+    <br>
+    <br>
+    <span id="result"></span>
+</div>
+<script>
+    function convertTemperature(n) {
+        let result;
+        result = (n - 32)/1.8;
+        return result;
+    }
+
+    function mainVoid() {
+        let temp = document.getElementById("inputValue").value;
+        document.getElementById("result").innerHTML = "Độ C là: " + convertTemperature(temp);
+    }
+</script>
+</body>
+</html>
