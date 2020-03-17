@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+Sử dụng hàm confirm để nhận thông tin đầu vào và đưa ra quyết định dựa trên những thông tin đó.
+-->
+<body>
+<script type="text/javascript">
+    let confirmAnswer = confirm("Are you mad?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+
+    function processConfirm(answer) {
+        let result = "";
+        if (answer){
+            result = "Yes, you are.";
+        } else {
+            result = "I'm sure you are.";
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
