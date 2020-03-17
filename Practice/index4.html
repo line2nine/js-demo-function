@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Tạo hàm chuyển đổi giữa feet và meter
+-->
+<div style="text-align: center">
+    <h2>Chuyển đổi độ dài</h2>
+    <p>Ứng dụng chuyển đổi Feet sang Met và ngược lại</p>
+
+<form>
+    <input type="number" id="resultFeet" name="feet" onchange="mainVoidFeet(this.value)" onkeyup="mainVoidFeet(this.value)" placeholder="Nhập số Feet"> FEET &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp=
+    <input type="number" id="resultMet" name="met" onchange="mainVoidMet(this.value)" onkeyup="mainVoidMet(this.value)" placeholder="Nhập số Met"> MET
+</form>
+</div>
+<script>
+    function convertFeetToMet(n) {
+        let result;
+        result = n * 0.305;
+        return result;
+    }
+
+    function convertMetToFeet(n) {
+        let result;
+        result = n / 0.305;
+        return result;
+    }
+
+    function mainVoidFeet() {
+        let inputLength = document.getElementById("resultFeet").value;
+        document.getElementById("resultMet").value = convertFeetToMet(inputLength);
+    }
+
+    function mainVoidMet() {
+        let inputLength = document.getElementById("resultMet").value;
+        document.getElementById("resultFeet").value = convertMetToFeet(inputLength);
+    }
+</script>
+</body>
+</html>
